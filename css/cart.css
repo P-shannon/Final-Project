@@ -1,0 +1,29 @@
+main{
+	position:absolute;
+	top:250px;
+	width:80%;height:1000px;
+	margin:0 10%;
+	background:grey;
+}
+#cartitemContainer{
+	position:absolute;
+	width:90%;height:90%;
+	margin:5%;
+	background:white;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.cartitemDummy{
+	width:250px;height:300px;
+	background:red;
+	border:2px solid black;
+	margin:10px;
+}
+button{
+	position:absolute;
+	display:block;
+	bottom:20px;
+	width:10%;
+	margin: 0 45%;
+}

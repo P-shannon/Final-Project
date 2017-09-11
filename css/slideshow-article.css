@@ -1,0 +1,73 @@
+main{
+	position:absolute;
+	top:250px;
+	width:60%;
+	margin:0 1% 0 39%;
+	background:grey;
+}
+main h2{
+	text-align: center;
+	font-size: 36px;
+	padding:0;
+	margin:0;
+}
+button{
+	margin: 3px;
+}
+.articleImage{
+	float:left;
+	width:200px;height:200px;
+	background:yellow;
+	margin:0 10px;
+}
+#article{
+	font-size: 24px;
+	width:90%;
+	line-height: 24px;
+	text-align: justify;
+	margin:0 5% 20px;
+}
+
+aside{
+	position:absolute;
+	top:250px;
+	width:525px;height:525px;
+	margin:0 1%;
+}
+.slide{
+	position:absolute;
+	display:none;
+	width:100%;height:100%;
+}
+.slideImage{
+	width:100%;height:100%;
+	background:red;
+}
+.slideText{
+	width:100%;height:20%;
+	position:absolute;
+	bottom:5%;
+	background:grey;
+}
+.slideText p{
+	width:95%;height:100%;
+	margin:0 2.5%;
+	font-size: 20px;
+	line-height:20px;
+	text-align: justify;
+}
+#slideshowControls{
+	width:100%;height:5%;
+	position:absolute;
+	bottom:0;
+	background:black;
+}
+#buttonContainer{
+	display:flex;
+	justify-content: center;
+	width:30%;
+	margin:0 35%;
+}
+#pause{
+	background:green;
+}

@@ -1,0 +1,64 @@
+body{
+	margin:0;
+	background:green;
+	color:white;
+}
+a{
+	color:inherit;
+	text-decoration: none;
+}
+div{
+	display: inline-block;
+}
+#headerContainer{
+	position:absolute;
+	display:flex;
+	flex-direction: column;
+	top:0;left:0;
+	width:100%;height:200px;
+	background:purple;
+	z-index:900;
+}
+header{
+	flex:4;
+}
+#logo{
+	width:150px;height:150px;
+	background:pink;
+}
+nav{
+	flex:1;
+	width:100%;height:40px;/*needed for when it becomes fixed at the top of the page*/
+	display:flex;
+	flex-direction: row;
+	background:black;
+	z-index: 900;
+	box-shadow: 0 2px 8px black;
+
+}
+nav a, #submenuTrigger{
+	flex:1;
+	font-size: 26px;
+	text-align: center;
+	line-height: 40px;
+	border-right: 2px solid white;
+	border-left:2px solid white;
+}
+#submenuContainer{
+	position:absolute;
+	z-index:900;
+	top:200px;right:0;
+	display:flex;
+	display:none;
+	flex-direction: column;
+	font-size: 24px;
+	width:33.3333%;
+	background:black;
+	border-top:2px solid white;
+}
+.menuItem:hover{
+	cursor:pointer;
+}
+.submenuItem{
+	flex:1;
+}

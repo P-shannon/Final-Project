@@ -1,0 +1,69 @@
+main{
+	position:absolute;
+	top:250px;
+	width:80%;height:1000px;
+	margin:0 18% 0 2%;
+	background:grey;
+}
+main h1{
+	display:block;
+	text-align: center;
+	font-size: 60px;
+	margin:0;
+}
+main p{
+	display:block;
+	text-align: justify;
+	font-size: 30px;
+	line-height: 30px;
+	width:90%;
+	margin:0 5% 15px;
+	background:pink;
+}
+#shopContainer{
+	width:95%;
+	margin:0 2.5%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.shopitemContainer{
+	width:250px;height:300px;
+	margin:5px;
+	background:pink;
+}
+.shopitemImage{
+	width:100%;height:100%;
+	background:yellow;
+}
+.shopitemText{
+	display:block;
+	margin:84% 0 0 0;
+	width:100%;height:30%;
+	background:orange;
+}
+aside{
+	position:fixed;
+	z-index: 50;
+	top:200px;right:0;
+	width:300px;height:500px;
+	background:red;
+}
+#cartitemContainer{
+	width:280px;height:430px;
+	margin:10px;
+	background:yellow;
+}
+#total{
+	width:100%;
+	font-size: 24px;
+	position:absolute;
+	bottom:5px;
+	text-align:center;
+}
+button{
+	position:absolute;
+	bottom:10px;
+	width:20%;
+	margin: 0 40%;
+}

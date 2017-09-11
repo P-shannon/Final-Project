@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/slideshow-article.css">
+	<title>Bio - Private Class Space Vessels</title>
+</head>
+<body onload="fixNav();startSlides();">
+<div id="headerContainer">
+	<header>
+		<a href="../index.html"><div id="logo"></div></a>
+	</header>
+
+	<nav>
+		<a href="bio.html"><div class="menuItem">Company Bio</div></a>
+		<a href="info.html"><div class="menuItem">Ship Information</div></a>
+		<div class="menuItem" id="submenuTrigger" onmouseenter="reveal()" onmouseleave="dismiss()">Shop</div>
+		<div id="submenuContainer" onmouseenter="reveal()" onmouseleave="dismiss()">
+			<a href="shopship.html"><div class="submenuItem">Ships</div></a>
+			<a href="shopgens.html"><div class="submenuItem">Generators</div></a>
+			<a href="shoppropul.html"><div class="submenuItem">Propulsion</div></a>
+			<a href="shopdrones.html"><div class="submenuItem">Drones</div></a>
+			<a href="cart.html"><div class="submenuItem">Cart</div></a>
+		</div>	
+	</nav>
+</div>
+
+<aside id="slideshowContainer">
+	<div class="slide" id="slide1">
+		<img class="slideImage">
+		<div class="slideText">one<p>
+			
+		</p></div>
+	</div>
+	<div class="slide" id="slide2">
+		<img class="slideImage">
+		<div class="slideText">two<p>
+			
+		</p></div>
+	</div>
+	<div class="slide" id="slide3">
+		<img class="slideImage">
+		<div class="slideText">three<p>
+			
+		</p></div>
+	</div>
+	<div class="slide" id="slide4">
+		<img class="slideImage">
+		<div class="slideText">four<p>
+			
+		</p></div>
+	</div>
+	<div class="slide" id="slide5">
+		<img class="slideImage">
+		<div class="slideText"><p>
+			FOURTY SIX WORDS, MOTHER FUCKERS!
+		</p></div>
+	</div>
+	<div id="slideshowControls">
+		<div id="buttonContainer">	
+			<button id="back" type="button" onclick="prevSlide()"><--</button>
+			<button id="pause" type="button" onclick="toggleShow()">||</button>
+			<button id="next" type="button" onclick="nextSlide()">--></button>
+		</div>
+	</div>
+</aside>
+
+<main>
+	<h2> Article Name</h2>
+	<p id="article">HAHAHAHAHAHAH SIX HUNDRED PLUS FUCKING WORDS HAHAHAHAHAHAH</p>
+</main>
+
+<script type="text/javascript" src="../scripts/slideshow.js"></script>
+<script type="text/javascript" src="../scripts/main.js"></script>
+</body>
+</html>
