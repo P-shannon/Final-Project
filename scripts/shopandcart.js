@@ -10,31 +10,45 @@ else{
 }
 
 function updateCart(){
+	cartDisplay.innerHTML = "";
 	for (i = 0;i < localStorage.totalItems; i++){
-		cartDisplay.innerHTML += '<div class="cartItem" id="item'+i+'"><div class="cartImage">'+shop[Number(localStorage.getItem('cartItem'+i))][0]+'</div><p>'+shop[Number(localStorage.getItem('cartItem'+i))][2]+'</p></div>';
+		console.log("localStorage.getItem('cartItem'"+i+")"+localStorage.getItem('cartItem'+i));
+		if(localStorage.getItem('cartItem'+i)!="skip"){
+			cartDisplay.innerHTML += '<div class="cartItem" id="item'+i+'"><div class="cartImage">'+shop[Number(localStorage.getItem('cartItem'+i))][0]+'</div><p>'+shop[Number(localStorage.getItem('cartItem'+i))][2]+'</p><button type="button" onclick="removeFromCart('+i+')">Remove</button></div>';
+		}
 	}
-	for (i = 0;i < localStorage.totalItems; i++){
-		n += Number(shop[Number(localStorage.getItem('cartItem'+i))][1]);
-		total.innerHTML = "Total: "+n;
-	}
-	n = 0;//prevents bleed of totaling
+	calcTotal();
+	console.log("END");
 }
 
 function moveToCart(id){
 	localStorage.setItem("cartItem"+localStorage.totalItems,id);
 	localStorage.totalItems++;
-	cartDisplay.innerHTML += '<div class="cartItem" id="item"'+Number(localStorage.totalItems)+'"><div class="cartImage">'+shop[id][0]+'</div><p>'+shop[id][2]+'</p></div>';
+	updateCart();
 	cartDisplay.scrollTop = cartDisplay.scrollHeight;
-	for (i=0;i<localStorage.totalItems;i++){
-		n += Number(shop[Number(localStorage.getItem('cartItem'+i))][1]);
-		total.innerHTML = "Total: "+n;
-	}
-	n = 0; //prevents bleed of totaling
+	
 }
 
 function clearCart(){
-	localStorage.totalItems = 0;
+	localStorage.clear();
 	cartDisplay.innerHTML = "";
 	n = 0;
-	total.innerHTML = "total: 0";
+	total.innerHTML = "Total: 0";
+	localStorage.totalItems = 0;
+}
+
+function removeFromCart(id){
+	localStorage.setItem("cartItem"+id,"skip");
+	updateCart();
+}
+
+function calcTotal(){
+	total.innerHTML = "Total: 0";
+	for (i=0;i<localStorage.totalItems;i++){
+		if (localStorage.getItem('cartItem'+i)!="skip"){
+			n += Number(shop[Number(localStorage.getItem('cartItem'+i))][1]);
+			total.innerHTML = "Total: "+n;
+		}
+	}
+	n = 0; //prevents bleed of totaling
 }
