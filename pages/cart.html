@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/cart.css">
 	<title>Cart - Private Class Space Vessels</title>
@@ -27,34 +28,19 @@
 	
 
 <main>
-	<div id="cartitemContainer">
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
-		<div class="cartitemDummy">
-			<div class="cartitemImage"></div>
-			<div class="cartitemText"></div>
-		</div>
+	<div id="cartItemContainer">
+		<!-- <div class="cartItem">
+			<div class="cartImage">
+				<p>
+				</p>
+			</div>
+		</div> -->
 	</div>
-	<button type="button">Purchase</button>
+	<button id="buy" type="button">Purchase</button>
+	<button id="clear" type="button" onclick="clearCart()">Clear Cart</button>
 </main>
+<script type="text/javascript" src="../scripts/shopdatabase.js"></script>
+<script type="text/javascript" src="../scripts/shopandcart.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
 </body>
 </html>

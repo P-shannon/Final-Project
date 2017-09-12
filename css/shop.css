@@ -28,6 +28,7 @@ main p{
 	justify-content: space-around;
 }
 .shopitemContainer{
+	position:relative; /*needed for absolute positioning of children*/
 	width:250px;height:300px;
 	margin:5px;
 	background:pink;
@@ -42,6 +43,12 @@ main p{
 	width:100%;height:30%;
 	background:orange;
 }
+.shopitemContainer button{
+	display:block;
+	position:absolute;
+	bottom:5px;
+	left:36%;
+}
 aside{
 	position:fixed;
 	z-index: 50;
@@ -49,10 +56,11 @@ aside{
 	width:300px;height:500px;
 	background:red;
 }
-#cartitemContainer{
+#cartItemContainer{
 	width:280px;height:430px;
 	margin:10px;
 	background:yellow;
+	overflow:scroll;
 }
 #total{
 	width:100%;
@@ -61,9 +69,26 @@ aside{
 	bottom:5px;
 	text-align:center;
 }
-button{
+#buttonContainer{
 	position:absolute;
+	left:0;
 	bottom:10px;
-	width:20%;
-	margin: 0 40%;
+	display:flex;
+	justify-content: space-around;
+	width:100%;
 }
+.cartItem{
+	background:grey;
+	width:98%;height:100px;
+	display:flex;
+	margin:1%;
+}
+.cartImage{
+	flex:1;
+	background:blue;
+}
+.cartItem p{
+	flex:2;
+	margin:0;
+}
+

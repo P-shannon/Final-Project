@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/shop.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 	<title>Shop - Ships - Private Class Space Vessels</title>
 </head>
 <body onload="fixNav()">
@@ -35,11 +36,12 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<div id="shopContainer">
 		<div class="shopitemContainer" id="shopitem1">
-			<div class="shopitemImage">
+			<div class="shopitemImage" onclick="onModal(0)">
 				<div class="shopitemText">
-					
+					ship one
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(0);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem2">
 			<div class="shopitemImage">
@@ -80,13 +82,54 @@
 </main>
 
 <aside>
-	<div id="cartitemContainer">
-
+	<div id="cartItemContainer">
+		<!-- <div class="cartItem" id="Dummy">
+			<div class="cartImage">image</div>
+			<p>test text</p>
+		</div> -->
 	</div>
 	<p id="total">Total:</p>
-	<button type="button">Purchase</button>
+	<div id="buttonContainer">
+		<button type="button">Purchase</button>
+		<button type="button" onclick="clearCart()">Clear</button>
+	</div>
 </aside>
 
+<div class="modal" id="modalContainer">
+	<div class="modal" id="modalBox">
+		<div class="modal" id="modalClose" onclick="offModal()">X</div>
+		<div class="modal" id="modalContent">
+			<!-- <div class="modalImage"></div>
+			<h1> NAME </h1>
+			<p>
+				text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
+			</p>
+			<ul>
+				<li>
+					Armor:
+				</li>
+				<li>
+					Cargo:
+				</li>
+				<li>
+					Weapons:
+				</li>
+				<li>
+					Utility:
+				</li>
+				<li>
+					Drone:
+				</li>
+			</ul>
+			<button type="button" id="add" onclick="moveToCart(0);offModal();">Move to Cart</button> -->
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="../scripts/shopdatabase.js"></script>
+<script type="text/javascript" src="../scripts/modal.js"></script>
+<script type="text/javascript" src="../scripts/shopandcart.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
 </body>
 </html>
