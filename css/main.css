@@ -27,18 +27,18 @@ div{
 }
 header{
 	flex:4;
-	font-family: 'Aldrich', sans-serif;
 }
 #logo{
-	width:150px;height:150px;
-	background:pink;
+	width:270px;height:150px;
 }
 header h1{
 	position:absolute;
-	top:0px;left:30px;
+	top:0px;left:90px;
 	font-size: 60px;
 	margin:0;
-	text-shadow: 0 3px 0 blue;
+	font-family: 'Aldrich', sans-serif;
+	color:rgb(0, 169, 255);
+	text-shadow: 0 3px 0 white;
 }
 #ip{
 	position:relative;

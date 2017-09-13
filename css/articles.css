@@ -3,18 +3,26 @@ main{
 	top:250px;
 	width:80%;
 	margin:0 10%;
-	background:grey;
+	background:rgba(255,255,255,0.3);
+	border-radius: 25px;
 }
 .articleContainer{
 	width:95%;
 	margin:30px 2.5%;
-	background:orange;
+	background:rgba(255,255,255,0.3);
+	border-radius: 75px;
 }
 .articleContainer h2{
+	display:block;
+	width:50%;
 	text-align: center;
 	font-size: 36px;
 	padding:0;
-	margin:0;
+	margin:0 0 25px 0;
+	font-family: 'Nova Mono', monospace;
+	color:white;
+	background:orange;
+	border-radius: 25px 25px 50px 50px;
 }
 .articleImage{
 	float:left;
@@ -23,6 +31,7 @@ main{
 	margin:0 10px;
 }
 .article{
+	font-family: 'Prosto One', cursive;
 	font-size: 24px;
 	width:90%;
 	line-height: 24px;
