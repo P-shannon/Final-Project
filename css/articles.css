@@ -27,8 +27,7 @@ main{
 .articleImage{
 	float:left;
 	width:200px;height:200px;
-	background:yellow;
-	margin:0 10px;
+	margin:0 10px 0 56px;
 }
 .article{
 	font-family: 'Prosto One', cursive;

@@ -1,16 +1,28 @@
 main{
 	position:absolute;
 	top:250px;
-	width:80%;height:1000px;
+	width:80%;height:1200px;
 	margin:0 10%;
-	background:grey;
+	background:rgba(255,255,255,0.3);
+	border-radius: 25px;
+}
+main h1{
+	display:inline-block;
+	text-align: center;
+	font-size: 60px;
+	margin:0 0 20px 0;
+	width:60%;
+	font-family: 'Nova Mono', monospace;
+	color:white;
+	background:orange;
+	border-radius: 25px 25px 50px 50px;
 }
 #cartItemContainer{
 	display: flex;
 	position:absolute;
-	width:90%;height:90%;
+	width:90%;height:70%;
 	margin:5%;
-	background:white;
+	background:rgba(175,175,175,0.3);
 	flex-wrap: wrap;
 	overflow:scroll;
 	justify-content: space-around;
@@ -21,10 +33,19 @@ main{
 	width:250px;height:300px;
 	margin:10px;
 }
+.cartItem:hover{
+	cursor: pointer;
+	transition:0.5s;
+	transform:scale(1.05,1.05);
+	z-index:5000;
+	box-shadow: 0 0 5px 2.5px white;
+}
 .cartImage{
 	position:relative;
 	top:0;left:0;
 	width:100%;height:100%;
+	font-family: 'Nova Mono', monospace;
+	font-size: 18px;
 	background:red;
 }
 .cartItem p{
@@ -32,6 +53,8 @@ main{
 	top:-30%;
 	display:inline-block;
 	width:100%;height:30%;
+	font-family: 'Nova Mono', monospace;
+	font-size: 12px;
 	background:black;
 	margin:0;
 }
@@ -54,4 +77,32 @@ main{
 	bottom:20px;
 	width:10%;
 	right:35%;
+}
+/*Modal stuff*/
+form{
+	width:100%;height:100%;
+	margin:0 20px;
+	overflow: scroll;
+}
+form h5{
+	margin:0;
+	font-family: 'Nova Mono', monospace;
+	font-size: 24px;
+	color:blue;
+}
+form input{
+	margin:0;
+	width:auto;height:24px;
+	font-size: 20px;
+}
+form select{
+	margin:0;
+	width:150px;height:28px;
+}
+#ccc1, #ccc2, #ccc3{
+	width:60px;
+	margin-right:8px;
+}
+#submit{
+	margin:10px 115px 0;
 }

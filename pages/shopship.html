@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 	<title>Shop - Ships - Private Class Space Vessels</title>
 </head>
-<body onload="fixNav()">
+<body onload="fixNav();moveBg();">
 <div id="headerContainer">
 	<header>
 		<a href="../index.html"><div id="logo"><img src="../images/logo.png"></div><h1>Lorem <span id="ip">Ipsum</span> <span id="ast">Astronautics</span></h1></a>
@@ -28,56 +28,67 @@
 </div>
 
 <main>
-	<h1>Category</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	<center><h1>Ships</h1></center>
+	<p><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
 	<div id="shopContainer">
 		<div class="shopitemContainer" id="shopitem1">
-			<div class="shopitemImage" onclick="onModal(0)">
+			<div class="shopitemImage" style="background:url('../images/ship1.jpg');background-size:cover;background-position:center;"	onclick="onModal(0)">
+				<h3>Ullamco</h3>
 				<div class="shopitemText">
-					ship one
+					The basic vessel for the basic consumer.
 				</div>
 			</div>
 			<button type="button" onclick="moveToCart(0);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem2">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/ship2.jpg');background-size:cover;background-position:center;"	onclick="onModal(1)">
+				<h3>Irure</h3>
 				<div class="shopitemText">
-					
+					The drone lover's delight.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(1);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem3">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/ship3.jpg');background-size:cover;background-position:center;"	onclick="onModal(2)">
+				<h3>Nulla</h3>
 				<div class="shopitemText">
-					
+					The armored power house.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(2);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem4">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/ship4.jpg');background-size:cover;background-position:center;"	onclick="onModal(3)">
+				<h3>Sunt</h3>
 				<div class="shopitemText">
-					
+					The utility vehicle.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(3);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem5">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/ship5.jpg');background-size:cover;background-position:center;"	onclick="onModal(4)">
+				<h3>Culpa</h3>
 				<div class="shopitemText">
-					
+					The speedster for people who like living on the edge.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(4);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem6">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/ship6.jpg');background-size:cover;background-position:center;"	onclick="onModal(5)">
+				<h3>Excepteur</h3>
 				<div class="shopitemText">
-					
+					The superior balance.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(5);">Add to Cart</button>
 		</div>
 	</div>
 </main>
@@ -92,7 +103,7 @@
 	</div>
 	<p id="total">Total:</p>
 	<div id="buttonContainer">
-		<button type="button">Purchase</button>
+		<button type="button" onclick="gotoCart()">Purchase</button>
 		<button type="button" onclick="clearCart()">Clear</button>
 	</div>
 </aside>
@@ -101,29 +112,6 @@
 	<div class="modal" id="modalBox">
 		<div class="modal" id="modalClose" onclick="offModal()">X</div>
 		<div class="modal" id="modalContent">
-			<!-- <div class="modalImage"></div>
-			<h1> NAME </h1>
-			<p>
-				text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
-			</p>
-			<ul>
-				<li>
-					Armor:
-				</li>
-				<li>
-					Cargo:
-				</li>
-				<li>
-					Weapons:
-				</li>
-				<li>
-					Utility:
-				</li>
-				<li>
-					Drone:
-				</li>
-			</ul>
-			<button type="button" id="add" onclick="moveToCart(0);offModal();">Move to Cart</button> -->
 		</div>
 	</div>
 </div>

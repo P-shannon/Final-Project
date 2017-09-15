@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Aldrich|Nova+Mono|Prosto+One" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/landing.css">
 	<title>Private Class Space Vessels</title>
 </head>
-<body>
-<div id="logoContainer">
-	<div id="logo">logo</div>
-	<div id="slogan"><h1>slogan</h1></div>
-</div>
+<body onload="moveAll();">
+<div id="headerContainer">
+	<header>
+		<a href="index.html">
+			<div id="logo">
+				<img src="images/logo.png">
+			</div>
+			<h1>
+			<span id="lor">Lorem</span> <span id="ip">Ipsum</span> <span id="ast">Astronautics</span>
+			</h1>
+		</a>
+	</header>
 
-<div id="slideshow">
+	<nav>
+		<a href="pages/bio.html"><div class="menuItem">Company Bio</div></a>
+		<a href="pages/info.html"><div class="menuItem">Ship Information</div></a>
+		<div class="menuItem" id="submenuTrigger" onmouseenter="reveal()" onmouseleave="dismiss()">Shop</div>
+		<div id="submenuContainer" onmouseenter="reveal()" onmouseleave="dismiss()">
+			<a href="pages/shopship.html"><div class="submenuItem">Ships</div></a>
+			<a href="pages/shopgens.html"><div class="submenuItem">Generators</div></a>
+			<a href="pages/shoppropul.html"><div class="submenuItem">Propulsion</div></a>
+			<a href="pages/shopdrones.html"><div class="submenuItem">Drones</div></a>
+			<a href="pages/cart.html"><div class="submenuItem">Cart</div></a>
+		</div>	
+	</nav>
 </div>
-
-<div id="menuContainer">
-	<a href="pages/bio.html"><div class="menuItem">Company Bio</div></a>
-	<a href="pages/info.html"><div class="menuItem">Ship Information</div></a>
-	<div class="menuItem" id="submenuTrigger">Shop</div>
-	<div id="submenuContainer">
-		<a href="pages/shopship.html"><div class="submenuItem">Ships</div></a>
-		<a href="pages/shopgens.html"><div class="submenuItem">Generators</div></a>
-		<a href="pages/shoppropul.html"><div class="submenuItem">Propulsion</div></a>
-		<a href="pages/shopdrones.html"><div class="submenuItem">Drones</div></a>
-		<a href="pages/cart.html"><div class="submenuItem">Cart</div></a>
-	</div>	
-</div>
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="scripts/animations.js"></script>
 </body>
 </html>

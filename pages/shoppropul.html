@@ -4,12 +4,13 @@
 <link href="https://fonts.googleapis.com/css?family=Aldrich|Nova+Mono|Prosto+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/shop.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 	<title>Shop - Propulsion - Private Class Space Vessels</title>
 </head>
-<body onload="fixNav()">
+<body onload="fixNav();moveBg();">
 <div id="headerContainer">
 	<header>
-		<a href="../index.html"><div id="logo"></div><h1>Lorem <span id="ip">Ipsum</span> <span id="ast">Astronautics</span></h1></a>
+		<a href="../index.html"><div id="logo"><img src="../images/logo.png"></div><h1>Lorem <span id="ip">Ipsum</span> <span id="ast">Astronautics</span></h1></a>
 	</header>
 
 	<nav>
@@ -27,55 +28,49 @@
 </div>
 
 <main>
-	<h1>Category</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	<center><h1>Category</h1></center>
+	<p><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
 	<div id="shopContainer">
 		<div class="shopitemContainer" id="shopitem1">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/propul1.jpg');background-size:cover;background-position:center;" onclick="onModal(11)">
+				<h3>Tempor</h3>
 				<div class="shopitemText">
-					
+					The basic propulsion system for the basic consumer.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(11);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem2">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/propul2.jpg');background-size:cover;background-position:center;" onclick="onModal(12)">
+				<h3>Cillum</h3>
 				<div class="shopitemText">
-					
+					The efficient thruster.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(12);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem3">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/propul3.jpg');background-size:cover;background-position:center;" onclick="onModal(13)">
+				<h3>Qui</h3>
 				<div class="shopitemText">
-					
+					The dragracer's dream.
 				</div>
 			</div>
+			<button type="button" onclick="moveToCart(13);">Add to Cart</button>
 		</div>
 		<div class="shopitemContainer" id="shopitem4">
-			<div class="shopitemImage">
+			<div class="shopitemImage" style="background:url('../images/propul4.png');background-size:cover;background-position:center;" onclick="onModal(14)">
+				<h3>Mollit</h3>
 				<div class="shopitemText">
-					
+					The slow and steady.
 				</div>
 			</div>
-		</div>
-		<div class="shopitemContainer" id="shopitem5">
-			<div class="shopitemImage">
-				<div class="shopitemText">
-					
-				</div>
-			</div>
-		</div>
-		<div class="shopitemContainer" id="shopitem6">
-			<div class="shopitemImage">
-				<div class="shopitemText">
-					
-				</div>
-			</div>
+			<button type="button" onclick="moveToCart(14);">Add to Cart</button>
 		</div>
 	</div>
 </main>
@@ -86,10 +81,22 @@
 	</div>
 	<p id="total">Total:</p>
 	<div id="buttonContainer">
-		<button type="button">Purchase</button>
+		<button type="button" onclick="apology()">Purchase</button>
 		<button type="button" onclick="clearCart()">Clear</button>
 	</div>
 </aside>
+
+<div class="modal" id="modalContainer">
+	<div class="modal" id="modalBox">
+		<div class="modal" id="modalClose" onclick="offModal()">X</div>
+		<div class="modal" id="modalContent">
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../scripts/shopdatabase.js"></script>
+<script type="text/javascript" src="../scripts/modal.js"></script>
+<script type="text/javascript" src="../scripts/shopandcart.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
 </body>
 </html>

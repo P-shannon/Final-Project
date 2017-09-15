@@ -3,7 +3,7 @@ body{
 	background:black;
 	color:white;
 }
-
+/*fit all images to thier containers*/
 img{
 	max-width: 100%;
 	max-height: 100%;
@@ -29,16 +29,20 @@ header{
 	flex:4;
 }
 #logo{
-	width:270px;height:150px;
+	position:relative;
+	top:20px;
+	width:270px;height:107px;
 }
 header h1{
 	position:absolute;
-	top:0px;left:90px;
+	display:inline-block;
+	top:0px;left:120px;
 	font-size: 60px;
 	margin:0;
 	font-family: 'Aldrich', sans-serif;
 	color:rgb(0, 169, 255);
 	text-shadow: 0 3px 0 white;
+	white-space: nowrap;
 }
 #ip{
 	position:relative;

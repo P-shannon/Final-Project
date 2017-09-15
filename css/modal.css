@@ -11,29 +11,41 @@
 #modalContent{
 	width:70%;height:70%;
 	margin:8% 15% 0;
-	background:purple;
+	background:rgba(255,255,255,0.7);
+	border-radius: 25px 0 25px 25px;
+	overflow: hidden;
 }
 #modalContent h1{
-	display:block;
+	display:inline-block;
+	width:40%;
+	margin: 20px 0 0 0;
+	font-family: 'Nova Mono', monospace;
 	text-align: center;
 	font-size: 55px;
+	background:orange;
+	border-radius: 0px 25px 50px 0px;
 }
 .modalImage{
 	width:300px;height:300px;
 	float: left;
-	margin:20px;
+	margin:20px 0 20px 20px;
 	background:red;
 }
 #modalContent p{
+	font-family: 'Nova Mono', monospace;
 	font-size: 30px;
+	display: block;
 	margin:5px;
-	background:yellow;
+	padding:5px;
 }
 #modalContent ul{
+	font-family: 'Nova Mono', monospace;
 	position:absolute;
 	font-size: 30px;
 	margin:5px;
-	background:yellow;
+	padding: 0 10px;
+	border-radius: 25px;
+	background:rgb(20%,20%,20%);
 	bottom:0;
 }
 #modalContent button{
@@ -47,6 +59,7 @@
 	width:50px;height:50px;
 	top:11%;
 	left:83%;
+	font-family: 'Nova Mono', monospace;
 	border-radius: 100000000000px; /*CIRCLE*/
 	text-align: center;
 	line-height: 50px;
@@ -55,4 +68,9 @@
 	color:black;
 	border:2px solid black;
 	z-index:500001;
+}
+#modalClose:hover{
+	color:white;
+	background:blue;
+	cursor:pointer;
 }

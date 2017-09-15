@@ -4,12 +4,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Aldrich|Nova+Mono|Prosto+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/cart.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 	<title>Cart - Private Class Space Vessels</title>
 </head>
-<body onload="fixNav()">
+<body onload="fixNav();moveBg();">
 <div id="headerContainer">
 	<header>
-		<a href="../index.html"><div id="logo"></div><h1>Lorem <span id="ip">Ipsum</span> <span id="ast">Astronautics</span></h1></a>
+		<a href="../index.html">
+			<div id="logo">
+				<img src="../images/logo.png">
+			</div>
+			<h1>
+			Lorem <span id="ip">Ipsum</span> <span id="ast">Astronautics</span>
+			</h1>
+		</a>
 	</header>
 
 	<nav>
@@ -28,6 +36,7 @@
 	
 
 <main>
+	<center><h1>Pending Purchases</h1></center>
 	<div id="cartItemContainer">
 		<!-- <div class="cartItem">
 			<div class="cartImage">
@@ -36,11 +45,66 @@
 			</div>
 		</div> -->
 	</div>
-	<button id="buy" type="button">Purchase</button>
+	<button id="buy" type="button" onclick="formModal()">Purchase</button>
 	<button id="clear" type="button" onclick="clearCart()">Clear Cart</button>
 </main>
+
+<div class="modal" id="modalContainer">
+	<div class="modal" id="modalBox">
+		<div class="modal" id="modalClose" onclick="offModal()">X</div>
+		<div class="modal" id="modalContent">
+			<!-- <form>
+				<h5>Full Name</h5>
+				<input type="text" name="name" id="name"><br>
+				<h5>Credit Chip Code</h5>
+				<input type="text" id="ccc1" name="ccc1" maxlength="4" oninput="jumpNext('#ccc1','#ccc2')"><input type="text" id="ccc2" name="ccc2" maxlength="4" oninput="jumpNext('#ccc2','#ccc3')"><input type="text" id="ccc3" name="ccc3" maxlength="4"><br>
+				<h5>Address</h5>
+				<input type="text" name="addr"><br>
+				<h5>City</h5>
+				<input type="text" name="city"><br>
+				<h5>Sector</h5>
+				<input type="text" name="sect"><br>
+				<h5>Galaxy</h5>
+				<select name="galax">
+					<option value="Milky Way">Milky Way</option>
+					<option value="Occaecat">Occaecat</option>
+					<option value="Voluptate">Voluptate</option>
+					<option value="Cupidatat">Cupidatat</option>
+					<option value="Veniam">Veniam</option>
+				</select>
+				<h5>Intergalactic Parcel Delivery Code</h5>
+				<input type="text" name="ipdc"><br>
+				<h5>Email Address</h5>
+				<input type="email" name="email"><br>
+				<input type="button" value="Confirm and Purchase" id="submit" onclick="theEnd();">
+			</form> -->
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript" src="../scripts/shopdatabase.js"></script>
+<script type="text/javascript" src="../scripts/modal.js"></script>
 <script type="text/javascript" src="../scripts/shopandcart.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
+<script>
+	function jumpNext(me,you){
+		//if I hit max characters in my field...
+		if(document.querySelector(me).value.length == document.querySelector(me).maxLength){
+			//jump to the other field
+			document.querySelector(you).focus();
+		}
+	}
+
+	function theEnd(){
+		var name = document.querySelector('#name').value;
+		if (name.length != 0){
+			alert('Well, '+name+' this is the end of the project. I hope you had as much fun navigating around it as I had building it. Of course at the end of the day I\'d like to do more with it, but I\'m limited by time and knowledge. Don\'t worry your pretty little head\(s\) about it, '+name+', I promise my work will only get better from here. Until next time!');
+			window.location.href = "../index.html";
+		}
+		else{
+			alert("Yo, really my dude? At least fill in a name.");
+		}
+	}
+</script>
 </body>
 </html>
